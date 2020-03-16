@@ -9,14 +9,15 @@ class Card extends Component {
     };
 
     const stil1 = { color: "#888" };
+    const { culoare, numar, text } = this.props;
 
     return (
       <div className="card text-center h-100">
-        <div className="bg-primary" style={stil}></div>
+        <div className={culoare} style={stil}></div>
         <div className="card-body">
-          <h5 className="card-title">31.517</h5>
+          <h5 className="card-title">{numar}</h5>
           <p className="card-text" style={stil1}>
-            Înscriși pe liste permanente și speciale
+            {text}
           </p>
         </div>
       </div>
